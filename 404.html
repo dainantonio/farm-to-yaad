@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Farm to Yaad</title>
+    <script>
+      // GitHub Pages SPA redirect trick
+      // Stores the path in sessionStorage then redirects to index.html
+      var path = window.location.pathname;
+      var repo = '/farm-to-yaad';
+      var newPath = repo + '/?p=' + encodeURIComponent(path.replace(repo, '') || '/');
+      sessionStorage.setItem('redirect', window.location.href);
+      window.location.replace(newPath);
+    </script>
+  </head>
+  <body></body>
+</html>
